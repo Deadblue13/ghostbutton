@@ -1,0 +1,152 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+body {background-color: #41464B}
+.wrap {
+	position: relative;
+	margin: 30px auto;
+	width: 690px;
+}
+.link {
+	width: 210px;
+	margin-left: 20px;
+	float: left;
+}
+.link .icon {
+	display: block;
+	width: 100%;
+	height: 190px;
+	transition: 1s ease;
+}
+
+.link .icon:hover {
+	transform: rotate(360deg) scale(1.20);
+}
+
+.link .icon-mission { background: url('../images/mission.png') center center no-repeat;}
+
+.link .icon-play { background: url('../images/play.png') center center no-repeat;}
+
+.link .icon-touch { background: url('../images/touch.png') center center no-repeat;}
+
+.link .button {
+	position: relative;
+	display: block;
+	width: 180px;
+	padding: 10px;
+	margin: 0 auto;
+	border: solid 2px rgba(255,255,255,0.8);
+	text-decoration: none;
+	background: url('../images/allow.png') 130px center no-repeat;
+	color:#00FF40;
+	transition: .7s ease;
+}
+
+.link .button:hover {
+	border: solid 2px rgba(255,255,255,1);
+	background-position: 140px center;
+}
+
+.link .line {
+	position: absolute;
+	display: block;
+	background-color: #fff;
+	transition: .7s ease;
+}
+
+.button .line-top {
+	top: -2px;
+	left: -110%;
+	height: 2px;
+	opacity: 0;
+}
+
+.button:hover .line-top {
+	width: 100%;
+	left: -2px;
+	opacity: 1;
+}
+
+.button .line-right {
+	right: -2px;
+	top: -110%;
+	width: 2px;
+	opacity: 0;
+}
+
+.button:hover .line-right {
+	top: -2px;
+	height: 100%;
+	opacity: 1;
+}
+
+.button .line-bottom {
+	bottom: -2px;
+	right: -110%;
+	height: 2px;
+	opacity: 0;
+}
+
+.button:hover .line-bottom {
+	right: -2px;
+	width: 100%;
+	opacity: 1;
+}
+
+.button .line-left {
+	left: -2px;
+	bottom: -110%;
+	width: 2px;
+	opacity: 0;
+}
+
+.button:hover .line-left {
+	bottom: -2px;
+	height: 100%;
+	opacity: 1;
+}
+
+.tip {
+	position: absolute;
+	top: 130px;
+	display: block;
+	background-color: #51FF7C;
+	border-radius: 5px;
+	padding: 10px;
+	opacity: 0;
+	transition: opacity .7s ease , top .7s ease;
+}
+
+.tip em {
+	font-style: normal;
+	color: #fff;
+}
+
+.tip span {
+	position: absolute;
+	margin-left: -4px;
+	left: 50%;
+	top: 37px;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	font-size:0;
+	line-height: 0;
+	border: 7px transparent;
+	border-top-color: #51FF7C;
+	border-style:solid dashed dashed dashed;
+
+}
+
+.tip-show {
+	top: 140px;
+	display: block;
+	opacity: 1;
+}
+
+
+
+

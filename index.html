@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GhostButton</title>
+	<link rel="stylesheet" href="css/index.css">
+	<script src="jslib/jquery.min.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="link">
+			<a href="" class="icon icon-mission"></a>
+			<a href="" class="button" Data-tip="This is MISSION button">
+				<span class="line line-top"></span>
+				<span class="line line-right"></span>
+				<span class="line line-bottom"></span>
+				<span class="line line-left"></span>
+			MISSION</a>
+		</div>
+		<div class="link">
+			<a href="" class="icon icon-play"></a>
+			<a href="" class="button" Data-tip="PLAY PLAY PLAY :)">
+				<span class="line line-top"></span>
+				<span class="line line-right"></span>
+				<span class="line line-bottom"></span>
+				<span class="line line-left"></span>
+			PLAY</a>
+		</div>
+		<div class="link">
+			<a href="" class="icon icon-touch"></a>
+			<a href="" class="button" Data-tip="OH,TOUCH,HAHAHA~~~~~">
+				<span class="line line-top"></span>
+				<span class="line line-right"></span>
+				<span class="line line-bottom"></span>
+				<span class="line line-left"></span>
+			Touch</a>
+		</div>
+		<div class="tip">
+			<em></em><span></span>
+		</div>
+	</div>
+	<script >
+		$(function(){
+			$('.link .button').hover(function(){
+				var tip = $(this).attr('Data-tip');
+				console.log(tip);
+				$('.tip em').text(tip);
+				var pos = $(this).position().left;
+				var dis = ($('.tip ').outerWidth() - $(this).outerWidth())/2;
+				console.log(dis);
+				$('.tip').css('left',(pos - dis) + 13);
+				$('.tip').css('transition','opacity .7s ease, top .7s ease');
+				$('.tip').addClass("tip-show");
+			},function(){
+				$('.tip').css('transition','0');
+				$('.tip').removeClass('tip-show');
+			});
+		});
+	</script>
+</body>
+</html>
